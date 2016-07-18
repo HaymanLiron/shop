@@ -29,11 +29,11 @@ var app = angular.module("shopApp", ['ngRoute'])
                 controller: 'mainController'
             })
             //route for the cart
-            .when('cart', {
+            .when('/cart', {
                 templateUrl: 'partials/cart.html',
                 controller: 'mainController'
             })
-            .when('individualProduct', {
+            .when('/individualProduct', {
                 templateUrl: 'partials/individualProduct.html',
                 controller: 'mainController'
             });

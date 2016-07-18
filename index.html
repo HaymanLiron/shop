@@ -3,18 +3,20 @@
 <head>
     <meta charset="utf-8">
     <title>Angular Store</title>
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <script src="https://code.angularjs.org/1.5.7/angular.js"></script>
     <script src="https://code.angularjs.org/1.5.7/angular-route.js"></script>
 </head>
 
-<body>
-<div class="container" data-ng-include="'./partials/navigationView.html'">
-    <div data-ng-view>
+<body class="position-relative">
+<div class="container" data-ng-include="'./partials/navigationView.html'"></div>
+<div class="main-container" data-ng-view>
+
     <!--element that holds the partial html-->
-    </div>
 </div>
+
 
 
 <script src="./app.js"></script>
