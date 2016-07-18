@@ -1,1 +1,8 @@
-cart
+<div class="cart-heading">CART</div>
+
+<div>You have bought the following items: </div>
+
+<div class="product-holder" ng-repeat="x in products">Product: {{x.name}} Cost: {{x.price}}<br/>
+    <img class="product-image" src="{{x.image}}" alt="{{x.name}}">
+</div>
+

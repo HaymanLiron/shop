@@ -11,6 +11,26 @@ storeItems = [
         name: 'iPhone 6',
         price: '$700',
         image: './images/iphone6.jpg'
+    },
+    {
+        name: 'Samsung Galaxy S6',
+        price: '$400',
+        image: './images/galaxyS6.png'
+    },
+    {
+        name: 'iPhone 6',
+        price: '$700',
+        image: './images/iphone6.jpg'
+    },
+    {
+        name: 'Samsung Galaxy S6',
+        price: '$400',
+        image: './images/galaxyS6.png'
+    },
+    {
+        name: 'iPhone 6',
+        price: '$700',
+        image: './images/iphone6.jpg'
     }
 ];
 
@@ -40,5 +60,5 @@ var app = angular.module("shopApp", ['ngRoute'])
     });
 
 app.controller("mainController", function ($scope) {
-    $scope.products = ["samsung", "iphone"];
+    $scope.products = storeItems;
 });
