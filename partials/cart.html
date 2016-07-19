@@ -2,7 +2,25 @@
 
 <div>You have bought the following items: </div>
 
-<div class="product-holder" ng-repeat="x in products">Product: {{x.name}} Cost: {{x.price}}<br/>
-    <img class="product-image" src="{{x.image}}" alt="{{x.name}}">
+<div class="row">
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">Price</div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">Quantity</div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">Total</div>
 </div>
 
+<div class="row" ng-repeat="x in products" ng-if="x.numBought > 0">
+    <div class="product-holder col-lg-3 col-md-3 col-sm-4 col-xs-4">
+        <img class="product-image" ng-src="{{x.image}}" alt="{{x.description}}"/>
+    </div>
+    <div class="product-holder">
+        Product: {{x.name}} Cost: {{x.price}}<br/>
+        Number purchased: {{x.numBought}}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">Total Items</div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">Total Price</div>
+</div>

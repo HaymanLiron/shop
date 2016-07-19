@@ -4,33 +4,19 @@
 storeItems = [
     {
         name: 'Samsung Galaxy S6',
+        productID: '123456',
         price: '$400',
-        image: './images/galaxyS6.png'
+        image: './images/galaxyS6.png',
+        description: 'State of the art from Samsung',
+        numBought: '3'
     },
     {
         name: 'iPhone 6',
+        productID: '987654',
         price: '$700',
-        image: './images/iphone6.jpg'
-    },
-    {
-        name: 'Samsung Galaxy S6',
-        price: '$400',
-        image: './images/galaxyS6.png'
-    },
-    {
-        name: 'iPhone 6',
-        price: '$700',
-        image: './images/iphone6.jpg'
-    },
-    {
-        name: 'Samsung Galaxy S6',
-        price: '$400',
-        image: './images/galaxyS6.png'
-    },
-    {
-        name: 'iPhone 6',
-        price: '$700',
-        image: './images/iphone6.jpg'
+        image: './images/iphone6.jpg',
+        description: 'Double the price of any other phone on the market, must be worth it',
+        numBought: '0'
     }
 ];
 
@@ -40,7 +26,7 @@ var app = angular.module("shopApp", ['ngRoute'])
         $routeProvider
         //route for the home page
             .when('/', {
-                templateUrl: 'partials/view2.html',
+                templateUrl: 'partials/dashboard.html',
                 controller: 'mainController'
             })
             //route for the dashboard
@@ -61,4 +47,11 @@ var app = angular.module("shopApp", ['ngRoute'])
 
 app.controller("mainController", function ($scope) {
     $scope.products = storeItems;
+
+    $scope.addBoughtItem = function(x) {
+        console.log(parseInt(x.numBought));
+        x.numBought = parseInt(x.numBought) + 1;
+
+
+    };
 });
