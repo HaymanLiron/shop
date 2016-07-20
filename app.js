@@ -30,7 +30,7 @@ var app = angular.module("shopApp", ['ngRoute'])
 app.controller("mainController", function ($scope, $http) {
 
     if (!($scope.products)){ //only do an HTTP request if it's the first time calling the function
-        $http.get("https://api.myjson.com/bins/1j3ft")
+        $http.get("https://api.myjson.com/bins/1wsht")
             .then(function (response) {
 
                 $scope.products = response.data['storeItems'];
@@ -57,7 +57,7 @@ app.controller("mainController", function ($scope, $http) {
 
         $scope.deleteBoughtItem = function (x) {
         x.numBought = 0;
-    }
+    };
 
     $scope.sum = function (property) {
         //function that sums up all values of a certain property in arr that holds multiple objects
