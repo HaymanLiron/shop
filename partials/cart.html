@@ -3,30 +3,33 @@
 <div>You have bought the following items: </div>
 
 <div class="row">
-    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"></div>
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Delete</b></div>
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Price</b></div>
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Quantity</b></div>
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Total</b></div>
 </div>
 
-
-
-
 <div class="row" ng-repeat="x in products" ng-if="x.numBought > 0">
     <div class="product-holder col-lg-3 col-md-3 col-sm-7 col-xs-7">
-        <img class="product-image" ng-src="{{x['image']}}" alt="{{x['description']}}"/>
+        <img class="product-image" ng-src="{{x.image}}" alt="{{x.description}}"/>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-2 col-xs-2">
-        {{x['name']}}
-    </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-        ${{x['price']}}
+    <div class="col-lg-5 col-md-5 col-sm-1 col-xs-1">
+        {{x.name}}
     </div>
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-        {{x['numBought']}}
+        <button ng-click="deleteBoughtItem(x)"><i class="fa fa-trash" aria-hidden="true"></i></button>
     </div>
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-        ${{x['totalCost']}}
+        {{x.price | currency:$:0}}
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+        {{x.numBought}}
+        <button ng-click="addBoughtItem(x)">+</button>
+        <button ng-click="subtractBoughtItem(x)">-</button>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+        {{x.totalCost | currency:$:0}}
     </div>
 </div>
 
@@ -38,8 +41,8 @@
 
 <div class="row">
     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"></div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>{{sum(products, numBought)}}</b></div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Total Price</b></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>{{sum('numBought')}}</b></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>{{sum('totalCost') | currency:$:0}}</b></div>
 </div>
 
 </div>
