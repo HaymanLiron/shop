@@ -4,23 +4,42 @@
 
 <div class="row">
     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"></div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">Price</div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">Quantity</div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">Total</div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Price</b></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Quantity</b></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Total</b></div>
 </div>
 
+
+
+
 <div class="row" ng-repeat="x in products" ng-if="x.numBought > 0">
-    <div class="product-holder col-lg-3 col-md-3 col-sm-4 col-xs-4">
-        <img class="product-image" ng-src="{{x.image}}" alt="{{x.description}}"/>
+    <div class="product-holder col-lg-3 col-md-3 col-sm-7 col-xs-7">
+        <img class="product-image" ng-src="{{x['image']}}" alt="{{x['description']}}"/>
     </div>
-    <div class="product-holder">
-        Product: {{x.name}} Cost: {{x.price}}<br/>
-        Number purchased: {{x.numBought}}
+    <div class="col-lg-6 col-md-6 col-sm-2 col-xs-2">
+        {{x['name']}}
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+        ${{x['price']}}
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+        {{x['numBought']}}
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+        ${{x['totalCost']}}
     </div>
 </div>
 
 <div class="row">
     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"></div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">Total Items</div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">Total Price</div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Total Items</b></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Total Price</b></div>
+</div>
+
+<div class="row">
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>{{sum(products, numBought)}}</b></div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Total Price</b></div>
+</div>
+
 </div>

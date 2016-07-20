@@ -1,28 +1,10 @@
 /**
  * Created by itc_user on 7/18/2016.
  */
-storeItems = [
-    {
-        name: 'Samsung Galaxy S6',
-        productID: '123456',
-        price: '$400',
-        image: './images/galaxyS6.png',
-        description: 'State of the art from Samsung',
-        numBought: '3'
-    },
-    {
-        name: 'iPhone 6',
-        productID: '987654',
-        price: '$700',
-        image: './images/iphone6.jpg',
-        description: 'Double the price of any other phone on the market, must be worth it',
-        numBought: '0'
-    }
-];
 
 
 var app = angular.module("shopApp", ['ngRoute'])
-    .config( function($routeProvider) {
+    .config(function ($routeProvider) {
         $routeProvider
         //route for the home page
             .when('/', {
@@ -45,13 +27,22 @@ var app = angular.module("shopApp", ['ngRoute'])
             });
     });
 
-app.controller("mainController", function ($scope) {
-    $scope.products = storeItems;
+app.controller("mainController", function ($scope, $http) {
 
-    $scope.addBoughtItem = function(x) {
-        console.log(parseInt(x.numBought));
-        x.numBought = parseInt(x.numBought) + 1;
+    if (!($scope.products)){ //only do an HTTP request if it's the first time calling the function
+        $http.get("https://api.myjson.com/bins/1j3ft")
+            .then(function (response) {
+                $scope.products = response.data['storeItems'];
+                console.log($scope.products);
+            });
+    }
 
-
+    $scope.addBoughtItem = function (x) {
+        x['numBought'] = parseInt(x['numBought']) + 1;
+        x['totalCost'] = parseInt(x['numBought']) * parseInt(x['price']);
+        console.log($scope.products[0].numBought);
+        console.log(x.numBought);
     };
+
+
 });
