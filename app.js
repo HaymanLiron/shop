@@ -32,7 +32,7 @@ app.controller("mainController", function ($scope, $http) {
     if (!($scope.products)){ //only do an HTTP request if it's the first time calling the function
         $http.get("https://api.myjson.com/bins/1j3ft")
             .then(function (response) {
-                
+
                 $scope.products = response.data['storeItems'];
             });
     }
