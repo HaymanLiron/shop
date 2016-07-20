@@ -1,12 +1,13 @@
-<div class="cart-heading">DASHBOARD</div>
+<div class="dashboard-heading">DASHBOARD</div>
 
-<div class="product-holder" ng-repeat="x in products">Product: {{x.name}} Cost: {{x.price}}<br/>
+<div class="product-holder" ng-repeat="x in products">Product: {{x.name}}<br/>
     <img class="product-image" ng-src="{{x.image}}" alt="{{x.name}}">
+    <p>Cost: {{x.price | currency}}</p>
     <p>Num bought: {{x.numBought}}</p>
     <button class="btn inline-block" ng-click="addBoughtItem(x)">Add to cart</button>
     <button class="btn inline-block" ng-click="addBoughtItem(x)">+</button>
     <button class="btn inline-block" ng-click="subtractBoughtItemDashboard(x)">-</button>
     <button class="btn btn-block" ng-click="show = !show">More information</button>
-    <p class="extra-details" ng-show="show">{{x.description}}</p>
+    <p class="extra-details" ng-show="show">{{x.name}}</p>
 </div>
 

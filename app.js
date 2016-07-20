@@ -29,7 +29,8 @@ var app = angular.module("shopApp", ['ngRoute'])
 
 app.controller("mainController", function ($scope, $http) {
 
-    if (!($scope.products)){ //only do an HTTP request if it's the first time calling the function
+    if (!($scope.products)) { //only do an HTTP request if it's the first time calling the function
+        console.log("hi man");
         $http.get("https://api.myjson.com/bins/1wsht")
             .then(function (response) {
 
@@ -43,7 +44,7 @@ app.controller("mainController", function ($scope, $http) {
     };
 
     $scope.subtractBoughtItem = function (x) {
-        if (x.numBought > 1){
+        if (x.numBought > 1) {
             x.numBought = parseInt(x.numBought) - 1;
         }
         x.totalCost = parseInt(x.numBought) * parseInt(x.price);
@@ -55,17 +56,18 @@ app.controller("mainController", function ($scope, $http) {
         }
     };
 
-        $scope.deleteBoughtItem = function (x) {
+    $scope.deleteBoughtItem = function (x) {
         x.numBought = 0;
+        x.totalCost = 0;
     };
 
     $scope.sum = function (property) {
         //function that sums up all values of a certain property in arr that holds multiple objects
         var arr = $scope.products;
-        if (arr && arr.hasOwnProperty(length)){
+        if (arr && arr.hasOwnProperty(length)) {
             var retNum = 0;
-            for (var i = 0; i < arr.length; i++){
-                if (arr[i].hasOwnProperty(property)){
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].hasOwnProperty(property)) {
                     retNum += parseInt(arr[i][property]);
                 }
             }
