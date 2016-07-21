@@ -44,7 +44,6 @@
 
 .product-holder-cart {
     width: 400px;
-
     border: 1px black solid;
     display: inline-block;
     text-align: center;
@@ -94,7 +93,7 @@
     width: 100%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     /* CSS Responsive table */
     table.responsive,
     table.responsive thead,
