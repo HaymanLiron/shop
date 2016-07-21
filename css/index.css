@@ -75,6 +75,10 @@
     vertical-align: top;
 }
 
+.individual-details-header {
+    text-align: left;
+}
+
 .text-align-left {
     text-align: left;
 }
