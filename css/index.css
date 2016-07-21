@@ -29,7 +29,6 @@
     font-size: 40px;
 }
 
-
 .product-holder {
     width: 300px;
     border: 1px black solid;
@@ -47,15 +46,22 @@
 
 .individual-prod-image {
     display: inline-block;
-    width: 40%;
+    width: 400px;
 }
 
 .individual-prod-details {
     display: inline-block;
-    width: 40%;
+    width: 400px;
 }
-
 
 .text-align-left {
     text-align: left;
+}
+
+.individual-prod-header {
+    font-size: 32px;
+}
+
+.float-left {
+    float: left;
 }

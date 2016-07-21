@@ -1,17 +1,17 @@
 <div ng-repeat="prod in products" ng-if="prod.productID == prodId">
-    <div class="individual-prod-image">
-        <img ng-src="{{prod.image}}" alt="{{prod.name}}"/>
-        <hr/>
-        <p>Number in cart: {{prod.numBought}}</p>
-        <button class="btn">Add to cart</button>
-        <button class="btn">+</button>
-        <button class="btn">-</button>
-    </div>
-    <div class="individual-prod-details">
-        <ul>
-            <li class="text-align-left" ng-repeat="detail in prod.details">{{detail}}</li>
-        </ul>
-    </div>
+
+        <div class="individual-prod-header">{{prod.name}}</div>
+        <div class="individual-prod-image">
+            <img ng-src="{{prod.image}}" alt="{{prod.name}}"/>
+            <p>Number in cart: {{prod.numBought}}</p>
+            <button class="btn" ng-click="addBoughtItem(prod)">Add to cart</button>
+            <button class="btn" ng-click="addBoughtItem(prod)">+</button>
+            <button class="btn" ng-click="subtractBoughtItemDashboard(prod)">-</button>
+        </div>
+        <div class="individual-prod-details position-relative">
+            <ul>
+                <li class="text-align-left" ng-repeat="detail in prod.details">{{detail}}</li>
+            </ul>
+        </div>
 
 </div>
-

@@ -118,6 +118,187 @@
       ],
       "numBought": "0",
       "totalCost": "0"
+    },
+    {
+      "name": "Nikon D7200 DSLR Camera (Body Only)",
+      "productID": "47894",
+      "price": "1046.95",
+      "image": "./images/nikonD7200.jpg",
+      "details": [
+        "24.2MP DX-Format CMOS Sensor",
+        "EXPEED 4 Image Processor",
+        "No Optical Low-Pass Filter",
+        "3.2\" 1,229k-Dot LCD Monitor",
+        "Full HD 1080p Video Recording at 60 fps",
+        "Multi-CAM 3500 II DX 51-Point AF Sensor",
+        "Native ISO 25600, B&W to ISO 102400",
+        "6 fps Shooting for Up to 100 Frames",
+        "Built-In Wi-Fi Connectivity with NFC",
+        "In-Camera Time Lapse, Up to 9,999 Frames"
+      ],
+      "numBought": "0",
+      "totalCost": "0"
+    },
+
+
+    {
+      "name": "Olympus Stylus TOUGH TG-4 Digital Camera (Red)",
+      "productID": "47895",
+      "price": "349",
+      "image": "./images/olympusStylus.jpg",
+      "details": [
+        "16MP 1/2.3\" BSI CMOS Sensor",
+        "TruePic VII Image Processor",
+        "Olympus 4x Optical Zoom f/2.0-4.9 Lens",
+        "25-100mm (35mm Equivalent)",
+        "Water, Crush, Shock, Freeze & Dustproof",
+        "Full HD 1920 x 1080p Video Recording",
+        "Built-In Wi-Fi, GPS, and eCompass",
+        "ISO 6400 and 5 fps Shooting at Full Res.",
+        "RAW Capture & Live Composite",
+        "Microscope and Underwater Modes"
+      ],
+      "numBought": "0",
+      "totalCost": "0"
+    },
+    {
+      "name": "Canon PowerShot G16 Digital Camera",
+      "productID": "47896",
+      "price": "499",
+      "image": "./images/canonG16.jpg",
+      "details": [
+        "12.1 Megapixel 1/1.7\" CMOS Sensor",
+        "Canon 5x Optical Zoom Lens (28-140mm)",
+        "Optical Zoom Viewfinder and 3.0\" LCD ",
+        "Full HD 1080/60p Video",
+        "DIGIC 6 Image Processing Engine",
+        "Enhanced Wi-Fi Capabilities",
+        "Continuous Shooting at 9.3 fps",
+        "Intelligent IS Image Stabilizatioמ",
+        "ISO 12800 and Canon HS SYSTEM"
+      ],
+      "numBought": "0",
+      "totalCost": "0"
+    }
+    ,
+    {
+      "name": "Canon EOS 6D DSLR Camera with 24-105mm f/4L Lens",
+      "productID": "47897",
+      "price": "2099",
+      "image": "./images/canonEOS.jpg",
+      "details": [
+        "20.2MP Full-Frame CMOS Sensor",
+        "DIGIC 5+ Image Processor",
+        "3.0\" 1.04m-Dot Clear View LCD Monitor",
+        "Full HD 1080p Video Recording at 30 fps",
+        "11-Point AF with Center Cross-Type Point",
+        "Native ISO 25600, Extended to ISO 102400",
+        "4.5 fps Shooting at Full Resolution",
+        "Built-In Wi-Fi and GPS Connectivity",
+        "iFCL 63-Zone Dual Layer Metering Sensor",
+        "EF 24-105mm f/4L IS USM Lens"
+      ],
+      "numBought": "0",
+      "totalCost": "0"
+    },
+    {
+      "name": "Sony Alpha a6000 Mirrorless Digital Camera with 16-50mm Lens (White)",
+      "productID": "47898",
+      "price": "698",
+      "image": "./images/sonyAlphaWhite.jpg",
+      "details": [
+        "24.3MP APS-C Exmor APS HD CMOS Sensor",
+        "BIONZ X Image Processor",
+        "Tru-Finder 0.39\" 1,440k-Dot OLED EVF",
+        "3.0\" 921k-Dot Xtra Fine Tilting LCD",
+        "Full HD 1080p XAVC S Video at 24/60 fps",
+        "Built-In Wi-Fi Connectivity with NFC",
+        "Fast Hybrid AF & 179 Phase-Detect Points",
+        "Up to 11 fps Shooting and ISO 25600",
+        "Multi-Interface Shoe and Built-In Flash",
+        "Sony 16-50mm f/3.5-5.6 OSS Zoom Lens"
+      ],
+      "numBought": "0",
+      "totalCost": "0"
+    },
+    {
+      "name": "Sony DSC-W830 Digital Camera (Silver)",
+      "productID": "47899",
+      "price": "108",
+      "image": "./images/sonyDSC.jpg",
+      "details": [
+        "20.1MP 1/2.3\" Super HAD CCD Image Sensor",
+        "25-200mm Zeiss Vario Lens (35mm Equiv)",
+        "2.7\" 230k-Dot Clear Photo LCD Monitor",
+        "HD 1280 x 720 Video at 30 fps",
+        "BIONZ Image Processor",
+        "Optical SteadyShot Image Stabilization",
+        "ISO 80-3200",
+        "Up to 360° Sweep Panorama Shooting",
+        "MS Duo and SD Memory Card SlotS",
+        "USB 2.0 Port, Composite HD Output"
+      ],
+      "numBought": "0",
+      "totalCost": "0"
+    },    {
+      "name": "Canon PowerShot ELPH 170 IS Digital Camera (Blue)",
+      "productID": "47900",
+      "price": "119",
+      "image": "./images/canonPowershotBlue.jpg",
+      "details": [
+        "20MP 1/2.3\" CCD Image Sensor",
+        "DIGIC 4+ Image Processor",
+        "Canon 12x Optical Zoom Lens",
+        "25-300mm (35mm Equivalent)",
+        "2.7\" 230k-Dot LCD Monitor",
+        "HD Video Recording at 25p",
+        "Intelligent IS Image Stabilization",
+        "ISO 1600 and 2.2 fps Shooting",
+        "ECO Mode and Help Button",
+        "Compatible with Connect Station CS100"
+      ],
+      "numBought": "0",
+      "totalCost": "0"
+    },
+    {
+      "name": "Nikon D3300 DSLR Camera with 18-55mm Lens (Black)",
+      "productID": "47901",
+      "price": "546.95",
+      "image": "./images/nikonD3300.jpg",
+      "details": [
+        "24.2MP DX-Format CMOS Sensor",
+        "EXPEED 4 Image Processor",
+        "No Optical Low-Pass Filter",
+        "3.0\" 921k-Dot LCD Monitor",
+        "Full HD 1080p Video Recording at 60 fps",
+        "Multi-CAM 1000 11-Point AF Sensor",
+        "Native ISO 12800, Extended to ISO 25600",
+        "5 fps Shooting at Full Resolution",
+        "Compatible with WU-1a Wireless Adapter",
+        "DX NIKKOR 18-55mm f/3.5-5.6G VR II Lens"
+      ],
+      "numBought": "0",
+      "totalCost": "0"
+    },
+    {
+      "name": "Sony Cyber-shot DSC-RX100 III Digital Camera",
+      "productID": "47902",
+      "price": "798",
+      "image": "./images/sonyRX100.jpg",
+      "details": [
+        "20.1MP 1\" Exmor R BSI CMOS Sensor",
+        "BIONZ X Image Processor",
+        "Zeiss Vario-Sonnar T* f/1.8-2.8 Lens",
+        "24-70mm (35mm Equivalent)",
+        "1440k-Dot OLED Tru-Finder Pop-Up EVF",
+        "3.0\" 1229k-Dot Multi-Angle Xtra Fine LCD",
+        "Full HD Video in XAVC S, Clean HDMI Out",
+        "Built-In Wi-Fi Connectivity with NFC",
+        "ISO 12800 and 10 fps Continuous Shooting ",
+        "Manual Control Ring & Built-In ND Filter "
+      ],
+      "numBought": "0",
+      "totalCost": "0"
     }
   ]
 }
