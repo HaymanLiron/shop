@@ -1,12 +1,15 @@
 <div class="dashboard-heading">DASHBOARD</div>
 
-<div class="product-holder" ng-repeat="x in products">Product: {{x.name}}<br/>
+<div class="product-holder position-relative" ng-repeat="x in products">
+    <div class="product-name-text-holder">
+        <p>{{x.name}}</p>
+    </div>
     <img class="product-image" ng-src="{{x.image}}" alt="{{x.name}}">
     <p>Cost: {{x.price | currency}}</p>
     <p>Num bought: {{x.numBought}}</p>
     <button class="btn inline-block" ng-click="addBoughtItem(x)">Add to cart</button>
     <button class="btn inline-block" ng-click="addBoughtItem(x)">+</button>
     <button class="btn inline-block" ng-click="subtractBoughtItemDashboard(x)">-</button>
-    <a class="color-inherit" ng-href="#/individualProduct/{{x.productID}}"><button class="btn btn-block">More information</button></a>
+    <a class="color-inherit" ng-href="#/individualProduct/{{x.productID}}"><button class="btn btn-block place-bottom">More information</button></a>
 </div>
 
