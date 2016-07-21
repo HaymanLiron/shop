@@ -22,7 +22,7 @@
     },
     {
       "name": "Fujifilm X-T2 Mirrorless Digital Camera (Body Only)",
-      "productID": "987654",
+      "productID": "234",
       "price": "1599",
       "image": "./images/fujifilmXT2.jpg",
       "details": [
@@ -42,7 +42,7 @@
     },
     {
       "name": "Samsung NX3000 Mirrorless Digital Camera with 20-50mm Lens (Black)",
-      "productID": "987654",
+      "productID": "547",
       "price": "379",
       "image": "./images/samsungNX3000.jpg",
       "details": [
@@ -61,7 +61,7 @@
     },
     {
       "name": "Sony Alpha a7S II Mirrorless Digital Camera (Body Only)",
-      "productID": "987654",
+      "productID": "798",
       "price": "2998",
       "image": "./images/sonyAlpha.jpg",
       "details": [
@@ -81,7 +81,7 @@
     },
     {
       "name": "Canon PowerShot G7 X Mark II Digital Camera",
-      "productID": "987654",
+      "productID": "7658",
       "price": "699",
       "image": "./images/canonPowershot.jpg",
       "details": [
@@ -101,7 +101,7 @@
     },
     {
       "name": "Nikon D750 DSLR Camera (Body Only)",
-      "productID": "987654",
+      "productID": "45783",
       "price": "1996.95",
       "image": "./images/nikonD750.jpg",
       "details": [

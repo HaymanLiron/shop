@@ -21,20 +21,22 @@ var app = angular.module("shopApp", ['ngRoute'])
                 templateUrl: 'partials/cart.html',
                 controller: 'mainController'
             })
-            .when('/individualProduct', {
+            .when('/individualProduct/:prodId', {
                 templateUrl: 'partials/individualProduct.html',
                 controller: 'mainController'
             });
     });
 
-app.controller("mainController", function ($scope, $http) {
+app.controller("mainController", function ($scope, $http, $routeParams) {
+
+    $scope.prodId = $routeParams.prodId;
 
     if (!($scope.products)) { //only do an HTTP request if it's the first time calling the function
-        console.log("hi man");
-        $http.get("https://api.myjson.com/bins/1wsht")
+        $http.get("https://api.myjson.com/bins/20131")
             .then(function (response) {
-
-                $scope.products = response.data['storeItems'];
+                if (!($scope.products)){
+                    $scope.products = response.data['storeItems'];
+                }
             });
     }
 

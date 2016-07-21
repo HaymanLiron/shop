@@ -7,7 +7,6 @@
     <button class="btn inline-block" ng-click="addBoughtItem(x)">Add to cart</button>
     <button class="btn inline-block" ng-click="addBoughtItem(x)">+</button>
     <button class="btn inline-block" ng-click="subtractBoughtItemDashboard(x)">-</button>
-    <button class="btn btn-block" ng-click="show = !show">More information</button>
-    <p class="extra-details" ng-show="show">{{x.name}}</p>
+    <a class="color-inherit" ng-href="#/individualProduct/{{x.productID}}"><button class="btn btn-block">More information</button></a>
 </div>
 

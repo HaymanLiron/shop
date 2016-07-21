@@ -1,1 +1,17 @@
-individual product page
+<div ng-repeat="prod in products" ng-if="prod.productID == prodId">
+    <div class="individual-prod-image">
+        <img ng-src="{{prod.image}}" alt="{{prod.name}}"/>
+        <hr/>
+        <p>Number in cart: {{prod.numBought}}</p>
+        <button class="btn">Add to cart</button>
+        <button class="btn">+</button>
+        <button class="btn">-</button>
+    </div>
+    <div class="individual-prod-details">
+        <ul>
+            <li class="text-align-left" ng-repeat="detail in prod.details">{{detail}}</li>
+        </ul>
+    </div>
+
+</div>
+
