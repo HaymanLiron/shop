@@ -1,130 +1,58 @@
 <div class="cart-heading">CART</div>
 
-<div>You have bought the following items: </div>
+<div>You have bought the following items:</div>
 
-<div class="row">
-    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"></div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Delete</b></div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Price</b></div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Quantity</b></div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Total</b></div>
-</div>
 
-<div class="row" ng-repeat="x in products" ng-if="x.numBought > 0">
-    <div class="product-holder-cart col-lg-3 col-md-3 col-sm-7 col-xs-7">
-        <img class="product-image-cart" ng-src="{{x.image}}" alt="{{x.description}}"/>
-    </div>
-    <div class="col-lg-5 col-md-5 col-sm-1 col-xs-1">
-        {{x.name}}
-    </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-        <button ng-click="deleteBoughtItem(x)"><i class="fa fa-trash" aria-hidden="true"></i></button>
-    </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-        {{x.price | currency:$:0}}
-    </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-        {{x.numBought}}
-        <button ng-click="addBoughtItem(x)">+</button>
-        <button ng-click="subtractBoughtItem(x)">-</button>
-    </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-        {{x.totalCost | currency:$:0}}
-    </div>
-</div>
-
-<hr/>
-<div class="row">
-    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"></div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Total Items</b></div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>Total Price</b></div>
-</div>
-
-<hr/>
-<div class="row">
-    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"></div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>{{sum('numBought')}}</b></div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><b>{{sum('totalCost') | currency:$:0}}</b></div>
-</div>
-
-</div>
-
-<table class="responsive-table responsive">
-    <tbody><tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Job Title</th>
-        <th>Favorite Color</th>
-        <th>Wars or Trek?</th>
-        <th>Movie Name</th>
-        <th>Date of Birth</th>
-        <th>Dream Vacation City</th>
-        <th>GPA</th>
-        <th>Arbitrary Data</th>
+<table class="responsive-table responsive width-100">
+    <tbody>
+    <tr>
+        <th class="text-center">Image</th>
+        <th class="text-center">Product Name</th>
+        <th class="text-center">Delete</th>
+        <th class="text-center">Price</th>
+        <th class="text-center">Quantity</th>
+        <th class="text-center">Total</th>
+    </tr>
+    <tr ng-repeat="x in products" ng-if="x.numBought > 0">
+        <td data-content="Image">
+            <img class="product-image-cart" ng-src="{{x.image}}" alt="{{x.description}}"/>
+        </td>
+        <td data-content="Product Name">
+            {{x.name}}
+        </td>
+        <td data-content="Delete">
+            <button ng-click="deleteBoughtItem(x)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        </td>
+        <td data-content="Price">
+            {{x.price | currency:$:0}}
+        </td>
+        <td data-content="Quantity">
+            {{x.numBought}}
+            <button class="btn inline-block" ng-click="addBoughtItem(x)">+</button>
+            <button class="btn inline-block" ng-click="subtractBoughtItem(x)">-</button>
+        </td>
+        <td data-content="Total">
+            {{x.totalCost | currency:$:0}}
+        </td>
     </tr>
     <tr>
-        <td class="small-padding tdno0" data-content="First Name">James</td>
-        <td class="small-padding tdno1" data-content="Last Name">Matman</td>
-        <td class="small-padding tdno2" data-content="Job Title">Chief Sandwich Eater</td>
-        <td class="medium-padding tdno3" data-content="Favorite Color">Lettuce Green</td>
-        <td class="medium-padding tdno4" data-content="Wars or Trek?">Trek</td>
-        <td class="small-padding tdno5" data-content="Movie Name">Digby Green</td>
-        <td class="medium-padding tdno6" data-content="Date of Birth">January 13, 1979</td>
-        <td class="large-padding tdno7" data-content="Dream Vacation City">Gotham City</td>
-        <td class="small-padding tdno8" data-content="GPA">3.1</td>
-        <td class="medium-padding tdno9" data-content="Arbitrary Data">RBX-12</td>
+        <th class="text-center"></th>
+        <th class="text-center"></th>
+        <th class="text-center"></th>
+        <th class="text-center"></th>
+        <th class="text-center">Total Items</th>
+        <th class="text-center">Total Price</th>
     </tr>
     <tr>
-        <td class="small-padding tdno0" data-content="First Name">The</td>
-        <td class="small-padding tdno1" data-content="Last Name">Tick</td>
-        <td class="small-padding tdno2" data-content="Job Title">Crimefighter Sorta</td>
-        <td class="medium-padding tdno3" data-content="Favorite Color">Blue</td>
-        <td class="medium-padding tdno4" data-content="Wars or Trek?">Wars</td>
-        <td class="small-padding tdno5" data-content="Movie Name">John Smith</td>
-        <td class="medium-padding tdno6" data-content="Date of Birth">July 19, 1968</td>
-        <td class="large-padding tdno7" data-content="Dream Vacation City">Athens</td>
-        <td class="small-padding tdno8" data-content="GPA">N/A</td>
-        <td class="medium-padding tdno9" data-content="Arbitrary Data">Edlund, Ben (July 1996).</td>
+        <td class="text-center"></td>
+        <td class="text-center"></td>
+        <td class="text-center"></td>
+        <td class="text-center"></td>
+        <td class="text-center"><b>{{sum('numBought')}}</b></td>
+        <td class="text-center"><b>{{sum('totalCost') | currency:$:0}}</b></td>
     </tr>
-    <tr>
-        <td class="small-padding tdno0" data-content="First Name">Jokey</td>
-        <td class="small-padding tdno1" data-content="Last Name">Smurf</td>
-        <td class="small-padding tdno2" data-content="Job Title">Giving Exploding Presents</td>
-        <td class="medium-padding tdno3" data-content="Favorite Color">Smurflow</td>
-        <td class="medium-padding tdno4" data-content="Wars or Trek?">Smurf</td>
-        <td class="small-padding tdno5" data-content="Movie Name">Smurflane Smurfmutt</td>
-        <td class="medium-padding tdno6" data-content="Date of Birth">Smurfuary Smurfteenth, 1945</td>
-        <td class="large-padding tdno7" data-content="Dream Vacation City">New Smurf City</td>
-        <td class="small-padding tdno8" data-content="GPA">4.Smurf</td>
-        <td class="medium-padding tdno9" data-content="Arbitrary Data">One</td>
-    </tr>
-    <tr>
-        <td class="small-padding tdno0" data-content="First Name">Cindy</td>
-        <td class="small-padding tdno1" data-content="Last Name">Beyler</td>
-        <td class="small-padding tdno2" data-content="Job Title">Sales Representative</td>
-        <td class="medium-padding tdno3" data-content="Favorite Color">Red</td>
-        <td class="medium-padding tdno4" data-content="Wars or Trek?">Wars</td>
-        <td class="small-padding tdno5" data-content="Movie Name">Lori Quivey</td>
-        <td class="medium-padding tdno6" data-content="Date of Birth">July 5, 1956</td>
-        <td class="large-padding tdno7" data-content="Dream Vacation City">Paris</td>
-        <td class="small-padding tdno8" data-content="GPA">3.4</td>
-        <td class="medium-padding tdno9" data-content="Arbitrary Data">3451</td>
-    </tr>
-    <tr>
-        <td class="small-padding tdno0" data-content="First Name">Captain</td>
-        <td class="small-padding tdno1" data-content="Last Name">Cool</td>
-        <td class="small-padding tdno2" data-content="Job Title">Tree Crusher</td>
-        <td class="medium-padding tdno3" data-content="Favorite Color">Blue</td>
-        <td class="medium-padding tdno4" data-content="Wars or Trek?">Wars</td>
-        <td class="small-padding tdno5" data-content="Movie Name">Steve 42nd</td>
-        <td class="medium-padding tdno6" data-content="Date of Birth">December 13, 1982</td>
-        <td class="large-padding tdno7" data-content="Dream Vacation City">Las Vegas</td>
-        <td class="small-padding tdno8" data-content="GPA">1.9</td>
-        <td class="medium-padding tdno9" data-content="Arbitrary Data">Under the couch</td>
-    </tr>
-    </tbody></table>
-
-
+    </tbody>
+</table>
 
 
 
