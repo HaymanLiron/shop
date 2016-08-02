@@ -11,6 +11,7 @@
             $http.get("https://api.myjson.com/bins/3t3od")
                 .then(function (response) {
                     if (!($scope.products)) {
+                        console.log("accessing site");
                         $scope.products = response.data['storeItems'];
                     }
                 });
